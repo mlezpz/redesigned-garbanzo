@@ -1,0 +1,4 @@
+- fix up an old beater convertible
+- get sponsored by scarpa
+- ice skating on a frozen lake
+- renovate my mom's house
