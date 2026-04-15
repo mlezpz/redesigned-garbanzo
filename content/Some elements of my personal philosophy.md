@@ -16,3 +16,15 @@ Nuanced / important conversations past 1 am is kinda like drunk driving
 give selfish gifts
 
 social media is a plague
+
+
+
+Realistically there is no race. Just like realistically there is no free will. But just like it is counterproductive to live like you don't have free will, it's a little counterproductive to live like there is no race
+That being said, I think that we should race for better things than career success, fame, wealth, yada yada. Race for being well rounded, race for being generous, race for finding happiness, race for being healthy, race for experiencing all life has to offer
+Envy one of the most effective motivators out there. Use it to your advantage 🫡
+
+
+
+
+
+

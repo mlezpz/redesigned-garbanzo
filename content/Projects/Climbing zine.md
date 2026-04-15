@@ -3,7 +3,6 @@ Inspiration:
 - My sister contributed to the Once is Never parkour zine
 - and maybe ran a few of her own
 
-
 Idea:
 - climbing is becoming ever more corporatized and mainstream. some disconnect and even butting heads of old school traditional dirtbag culture and current indoor boulder bro culture
 - seeing the outcrop of like... fashion ?? large baggy pants arcteryx beanies etc.
@@ -33,4 +32,13 @@ Alternate idea: cute fun art book where the theme is everything but climbing
 - meta art in art
 - stoners
 - naps
-- 
+
+
+Maybe I am dreaming too big. 
+
+The fanzines I was a part of before were much smaller. I think I will make this more of an artbook
+
+
+
+
+
