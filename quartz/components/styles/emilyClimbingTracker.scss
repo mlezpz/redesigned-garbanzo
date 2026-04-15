@@ -1,0 +1,492 @@
+.emily-climbing-tracker {
+  width: 100%;
+  margin: 1.5rem 0 2rem;
+}
+
+.emily-climbing-loading,
+.emily-climbing-empty {
+  color: var(--darkgray);
+}
+
+.emily-climbing-shell {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.emily-climbing-hero,
+.metric-card,
+.dashboard-card {
+  border: 1px solid color-mix(in srgb, var(--secondary) 14%, var(--lightgray));
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--light) 88%, var(--secondary) 3%),
+    var(--light)
+  );
+  border-radius: 1.5rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.05);
+}
+
+.emily-climbing-hero {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 1fr);
+  padding: 1.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.emily-climbing-hero h2,
+.section-heading h3 {
+  margin: 0;
+}
+
+.status-line {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  margin: 0.9rem 0 0.4rem;
+  font-size: 1.15rem;
+}
+
+.status-label,
+.timestamp,
+.storage-note,
+.section-heading p,
+.metric-card span,
+.gym-choice small,
+.emily-climbing-history-list span,
+.emily-climbing-legend li span {
+  color: var(--darkgray);
+}
+
+.muted {
+  opacity: 0.82;
+}
+
+.storage-note {
+  margin: 1rem 0 0;
+  max-width: 48ch;
+}
+
+.tracker-message {
+  margin: 0;
+  padding: 0.8rem 0.95rem;
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--secondary) 8%, var(--light));
+}
+
+.tracker-message.error {
+  background: color-mix(in srgb, #c8553d 12%, var(--light));
+  color: color-mix(in srgb, #7f2718 72%, var(--dark));
+}
+
+.emily-climbing-controls {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.auth-card {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--secondary) 6%, var(--light));
+  border: 1px solid color-mix(in srgb, var(--secondary) 14%, var(--lightgray));
+}
+
+.auth-status-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+}
+
+.auth-title,
+.auth-status {
+  margin: 0;
+}
+
+.auth-title {
+  font-weight: 700;
+}
+
+.auth-status {
+  color: var(--darkgray);
+}
+
+.auth-status.is-enabled {
+  color: color-mix(in srgb, #1d6b57 72%, var(--dark));
+}
+
+.admin-token-form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.admin-token-form label {
+  font-weight: 600;
+}
+
+.admin-token-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.7rem;
+}
+
+.admin-token-row input {
+  border: 1px solid var(--lightgray);
+  border-radius: 0.9rem;
+  padding: 0.8rem 0.9rem;
+  background: var(--light);
+  color: var(--dark);
+}
+
+.token-clear {
+  align-self: start;
+  background: transparent;
+  color: var(--secondary);
+  border: 1px solid color-mix(in srgb, var(--secondary) 18%, var(--lightgray));
+  border-radius: 0.85rem;
+  padding: 0.65rem 0.8rem;
+}
+
+.write-controls {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.write-controls.is-readonly {
+  opacity: 0.65;
+}
+
+.gym-button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.gym-choice,
+.custom-gym-row button,
+.clear-choice {
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.gym-choice {
+  display: grid;
+  gap: 0.2rem;
+  text-align: left;
+  padding: 0.9rem 1rem;
+  background: color-mix(in srgb, var(--light) 88%, var(--secondary) 5%);
+  border-color: color-mix(in srgb, var(--gym-color) 28%, var(--lightgray));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--gym-color) 16%, transparent);
+}
+
+.gym-choice:hover,
+.custom-gym-row button:hover,
+.clear-choice:hover,
+.token-clear:hover {
+  transform: translateY(-1px);
+}
+
+.gym-choice:disabled,
+.custom-gym-row button:disabled,
+.clear-choice:disabled,
+.token-clear:disabled {
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.65;
+  box-shadow: none;
+}
+
+.gym-choice.is-active {
+  background: color-mix(in srgb, var(--gym-color) 16%, var(--light));
+  border-color: var(--gym-color);
+  box-shadow: 0 10px 22px color-mix(in srgb, var(--gym-color) 22%, transparent);
+}
+
+.custom-gym-form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.custom-gym-form label {
+  font-weight: 600;
+}
+
+.custom-gym-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.7rem;
+}
+
+.custom-gym-row input {
+  border: 1px solid var(--lightgray);
+  border-radius: 0.9rem;
+  padding: 0.8rem 0.9rem;
+  background: var(--light);
+  color: var(--dark);
+}
+
+.custom-gym-row button,
+.clear-choice,
+.admin-token-row button {
+  padding: 0.8rem 1rem;
+  background: var(--secondary);
+  color: var(--light);
+}
+
+.clear-choice {
+  background: color-mix(in srgb, var(--dark) 10%, var(--light));
+  color: var(--dark);
+  border-color: color-mix(in srgb, var(--dark) 12%, var(--lightgray));
+}
+
+.emily-climbing-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.metric-card {
+  padding: 1.1rem 1.2rem;
+}
+
+.metric-card p,
+.metric-card strong,
+.metric-card span {
+  display: block;
+}
+
+.metric-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--darkgray);
+}
+
+.metric-card strong {
+  margin: 0.2rem 0 0.3rem;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1;
+}
+
+.metric-card.emphasis {
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--tertiary) 22%, var(--light)),
+    var(--light)
+  );
+}
+
+.emily-climbing-dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr);
+  gap: 1rem;
+}
+
+.dashboard-card {
+  padding: 1.25rem;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-heading p {
+  margin: 0;
+  text-align: right;
+}
+
+.pie-layout {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  grid-template-columns: minmax(190px, 220px) minmax(0, 1fr);
+}
+
+.emily-climbing-pie {
+  width: min(220px, 100%);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  position: relative;
+  justify-self: center;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+}
+
+.emily-climbing-pie-hole {
+  position: absolute;
+  inset: 22%;
+  border-radius: 999px;
+  background: var(--light);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.emily-climbing-pie-hole strong {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.emily-climbing-pie-hole span {
+  color: var(--darkgray);
+}
+
+.emily-climbing-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.emily-climbing-legend li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.emily-climbing-legend-swatch {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 999px;
+}
+
+.emily-climbing-map-scroll {
+  overflow: auto;
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--secondary) 4%, var(--light));
+}
+
+.emily-climbing-map {
+  min-width: 920px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.map-bg {
+  fill: color-mix(in srgb, var(--secondary) 7%, var(--light));
+}
+
+.grid-line,
+.map-frame {
+  stroke: color-mix(in srgb, var(--secondary) 18%, transparent);
+  stroke-width: 1;
+}
+
+.map-frame {
+  fill: none;
+  stroke-dasharray: 8 8;
+}
+
+.count-label,
+.gym-label {
+  fill: var(--dark);
+  font-family: var(--bodyFont);
+}
+
+.count-label {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.gym-label {
+  font-size: 0.9rem;
+}
+
+.history-card {
+  overflow: hidden;
+}
+
+.emily-climbing-history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 22rem;
+  overflow: auto;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.emily-climbing-history-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--light) 90%, var(--secondary) 4%);
+}
+
+.emily-climbing-history-list li div {
+  display: grid;
+  gap: 0.2rem;
+}
+
+@media (max-width: 1100px) {
+  .emily-climbing-dashboard-grid,
+  .emily-climbing-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .pie-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .section-heading p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 760px) {
+  .emily-climbing-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-gym-row {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-token-row {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-status-row {
+    flex-direction: column;
+  }
+
+  .emily-climbing-hero,
+  .metric-card,
+  .dashboard-card {
+    border-radius: 1.1rem;
+  }
+}
