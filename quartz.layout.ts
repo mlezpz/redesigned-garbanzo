@@ -24,6 +24,10 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
+    Component.ConditionalRender({
+      component: Component.EmilyClimbingTracker(),
+      condition: (page) => page.fileData.slug === "where-is-emily-climbing",
+    }),
   ],
   left: [
     Component.PageTitle(),

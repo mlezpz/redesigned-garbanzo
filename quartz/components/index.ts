@@ -4,6 +4,7 @@ import FolderContent from "./pages/FolderContent"
 import NotFound from "./pages/404"
 import ArticleTitle from "./ArticleTitle"
 import Darkmode from "./Darkmode"
+import EmilyClimbingTracker from "./EmilyClimbingTracker"
 import ReaderMode from "./ReaderMode"
 import Head from "./Head"
 import PageTitle from "./PageTitle"
@@ -30,6 +31,7 @@ export {
   TagContent,
   FolderContent,
   Darkmode,
+  EmilyClimbingTracker,
   ReaderMode,
   Head,
   PageTitle,

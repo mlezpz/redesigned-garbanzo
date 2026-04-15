@@ -1,14 +1,23 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "redesigned-garbanzo",
+  "main": "worker/index.ts",
   "compatibility_date": "2026-04-13",
   "observability": {
-    "enabled": true
+    "enabled": true,
   },
   "assets": {
-    "directory": "public"
+    "directory": "public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"],
   },
-  "compatibility_flags": [
-    "nodejs_compat"
-  ]
+  "d1_databases": [
+    {
+      "binding": "CLIMBING_DB",
+      "database_name": "emily-climbing",
+      "database_id": "b18cea38-9172-4543-bd11-44cb075d66ab",
+      "migrations_dir": "migrations",
+    },
+  ],
+  "compatibility_flags": ["nodejs_compat"],
 }
